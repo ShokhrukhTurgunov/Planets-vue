@@ -36,9 +36,7 @@
 
 
 html {
-    height: 100%;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Open Sans';
 }
 
@@ -50,10 +48,12 @@ html {
 
 body {
     font-family: 'Open Sans', 'Arial', sans-serif;
-    height: 100%;
     padding: 0;
     font-size: 15px;
     line-height: 16px;
+    background-image: url("/images/site-bg.png");
+    background-position: center center;
+    background-repeat: repeat-y;
 }
 
 img {
@@ -77,11 +77,271 @@ a {
     overflow: hidden;
 }
 
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+    margin: 0;
+}
+
+.wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px;
+    margin: 0 auto;
+}
+
+.site-logo {
+    font-family: Antonio;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.05px;
+    color: #FFFFFF;
+}
+
+.site-nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.site-nav__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.site-nav__link {
+    font-family: Spartan;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.site-nav__link:hover {
+    color: #c0bcbc;
+}
+
+.activeTab {
+    color: #FFFFFF;
+    border-bottom: 2px solid #419EBB;
+}
+
+.activePlanet {
+    background-color: green;
+}
+
+/* MAIN */
+
+.main-image-box {
+    margin-left: 130px;
+}
+
+.main-info-section {
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planet-title {
+    margin-bottom: 23px;
+    font-family: Antonio;
+    font-size: 80px;
+    line-height: 104px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.planet-info {
+    max-width: 350px;
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: Spartan;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.planet-source {
+    margin-bottom: 39px;
+    font-family: Spartan;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.planet-link {
+    font-family: Spartan;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.planet-button-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.planet-button-item {
+    padding: 12px 28px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.57143px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 1px solid rgba(250, 250, 250, 0.308);
+}
+
+.planet-button-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.planet-button-item:hover {
+    background-color: #d8d8d82d;
+}
+
+.planet-button-item span {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.activeBtn {
+    background: #419EBB;
+}
+
+
+.addl-info-section {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.about-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-item {
+    width: 200px;
+    padding: 25px;
+    border: 1px solid rgba(250, 250, 250, 0.308);
+}
+
+.about-title {
+    margin: 0;
+    font-family: Spartan;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.about-caption {
+    margin: 0;
+    font-family: Antonio;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 800px) {
+    .logo {
+        margin-bottom: 40px;
+    }
+
+    .site-header {
+        flex-direction: column;
+    }
+
+    .main-info-box {
+        justify-content: space-between;
+    }
+
+    .main-info-section {
+        flex-direction: column;
+    }
+
+    .main-image-box {
+        margin: 0;
+        margin-bottom: 80px;
+    }
+
+    .main-info-box {
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .planet-title {
+        font-size: 48px;
+        line-height: 62px;
+    }
+
+    .planet-button-item {
+        white-space: nowrap;
+    }
+
+    .about-item {
+        max-width: 170px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .about-title {
+        white-space: nowrap;
+        font-size: 8px;
+        line-height: 16px;
+    }
+
+    .about-caption {
+        font-size: 24px;
+        line-height: 31px;
+    }
 }
