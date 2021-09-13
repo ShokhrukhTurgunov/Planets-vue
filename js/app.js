@@ -8,6 +8,8 @@ Vue.component('planet-tabs', {
                   <h2 class="site-logo">THE PLANETS</h2>
               </div>
 
+              <button class="site-header__toggle-btn" @click="activeNav"></button>
+
               <nav class="site-nav">
                   <ul class="site-nav__list">
                     <li v-for="(planet, index) in planets"
@@ -245,6 +247,14 @@ Vue.component('planet-tabs', {
       },
       selectedPlanet: 'Mercury',
       selectedButton:"overview",
+    }
+  },
+  methods: {
+    activeNav(){
+      let siteBurger = document.querySelector('.site-header__toggle-btn')
+      let navList = document.querySelector('.site-nav__list')
+
+      navList.classList.toggle('site-nav__list--active');
     }
   }
 })

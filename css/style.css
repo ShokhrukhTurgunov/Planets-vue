@@ -112,6 +112,10 @@ h6 {
     color: #FFFFFF;
 }
 
+.site-header__toggle-btn {
+    display: none;
+}
+
 .site-nav__list {
     margin: 0;
     padding: 0;
@@ -352,8 +356,61 @@ h6 {
         margin: 0;
     }
 
-    .site-nav {
-        display: none;
+    .site-header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .site-header__toggle-btn {
+        display: block;
+        background: url(/images/nav.svg) center center;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        border: none;
+        background-color: inherit;
+    }
+
+    .site-main {
+        position: relative;
+        z-index: -1;
+    }
+
+    .site-nav__list {
+        display: block;
+        position: absolute;
+        position: fixed;
+        top: 20%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-left: 55px;
+        padding-top: 20px;
+        flex-direction: column;
+        background-color: #070724;
+        z-index: 99;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in;
+    }
+
+    .site-nav__list--active {
+        transform: translateX(0%);
+    }
+
+    .site-nav__item {
+        border-bottom: 1px solid #979797;
+    }
+
+    .site-nav__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .activeTab {
+        border-bottom: 1px solid #4b4a4a;
     }
 
     .main-info-section {
