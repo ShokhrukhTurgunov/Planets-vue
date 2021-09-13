@@ -347,7 +347,7 @@ h6 {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .logo {
         margin: 0;
     }
@@ -386,6 +386,12 @@ h6 {
 
     .planet-button-item span {
         display: none;
+    }
+
+    .planet-title,
+    .planet-info,
+    .planet-source {
+        text-align: center;
     }
 
     .about-list {
