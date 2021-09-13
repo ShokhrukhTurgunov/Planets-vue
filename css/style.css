@@ -345,3 +345,68 @@ h6 {
         line-height: 31px;
     }
 }
+
+
+@media only screen and (max-width: 400px) {
+    .logo {
+        margin: 0;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .main-info-section {
+        position: relative;
+    }
+
+    .planet-button-list {
+        display: none;
+        position: absolute;
+        top: 0;
+        display: flex;
+    }
+
+    .activeBtn {
+        background: inherit;
+        border-bottom: 4px solid #419EBB;
+    }
+
+    .planet-button-item {
+        padding: 15px 5px;
+        border: none;
+        font-size: 7px;
+        line-height: 10px;
+        letter-spacing: 1.92857px;
+    }
+
+    .planet-button-item:not(:last-child) {
+        margin: 0;
+    }
+
+    .planet-button-item span {
+        display: none;
+    }
+
+    .about-list {
+        flex-direction: column;
+    }
+
+    .about-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 350px;
+        margin: 0;
+        padding: 8px;
+    }
+
+    .about-item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .about-caption {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
